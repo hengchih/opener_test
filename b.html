@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
+<div id="result"></div>
 <script>
-    console.log(opener);
+    document.getElementById('result').innerHTML = typeof opener.a_alert;
     opener.a_alert();
 </script>
 </body>
