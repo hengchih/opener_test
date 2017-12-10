@@ -7,8 +7,15 @@
 <body>
 <div id="result"></div>
 <script>
-    document.getElementById('result').innerHTML = typeof opener.a_alert;
-    opener.a_alert();
+    window.onload = function () {
+        try{
+            document.getElementById('result').innerHTML = typeof opener.a_alert;
+            opener.a_alert(typeof opener.a_alert, window);
+        } catch (err) {
+            //error
+            console.log(err);
+        }
+    }
 </script>
 </body>
 </html>
