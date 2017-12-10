@@ -6,13 +6,13 @@
     <title>Title</title>
 </head>
 <body>
-<p>4</p>
+<p>5</p>
 <div id="result"></div>
 <div id="error"></div>
 <script>
     window.onload = function () {
         try{
-            document.getElementById('result').innerHTML = (typeof opener) + (typeof opener.nineyi);
+            document.getElementById('result').innerHTML = opener === null ? 'null' : typeof opener;
             opener.a_alert(typeof opener.a_alert, window);
             window.close();
         } catch (err) {
