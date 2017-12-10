@@ -11,6 +11,7 @@
         try{
             document.getElementById('result').innerHTML = typeof opener;
             opener.a_alert(typeof opener.a_alert, window);
+            window.close();
         } catch (err) {
             //error
             console.log(err);
