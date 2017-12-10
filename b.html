@@ -6,16 +6,18 @@
     <title>Title</title>
 </head>
 <body>
-<p>1</p>
+<p>2</p>
 <div id="result"></div>
+<div id="error"></div>
 <script>
     window.onload = function () {
         try{
-            document.getElementById('result').innerHTML = typeof opener;
+            document.getElementById('result').innerHTML = (typeof opener) + (typeof opener.a_alert);
             opener.a_alert(typeof opener.a_alert, window);
             window.close();
         } catch (err) {
             //error
+            document.getElementById('error').innerHTML = err;
             console.log(err);
         }
     }
